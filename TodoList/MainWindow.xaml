@@ -1,0 +1,29 @@
+﻿<Window x:Class="ContactList.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ContactList"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Background="#011025">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="8*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0">
+            <Button Content="add Todo" Width="120" Height="40" Margin="15" BorderBrush="Transparent"
+                    Background="Green" Foreground="White" FontSize="20" Click="AddTodoOpen_OnClick"></Button>
+        </StackPanel>
+        <ScrollViewer Grid.Row="1">
+            <StackPanel x:Name="StackTodo" HorizontalAlignment="Center" CanVerticallyScroll="false">
+                
+            </StackPanel>
+        </ScrollViewer>
+        <StackPanel Grid.Row="2" VerticalAlignment="Bottom">
+            <Button Content="Quit" FontSize="25" Width="120" Height="40" Background="Brown"
+                    BorderBrush="Transparent" Margin="15" Click="ButtonBase_OnClick"></Button>
+        </StackPanel>
+    </Grid>
+</Window>

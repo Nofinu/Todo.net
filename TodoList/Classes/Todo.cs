@@ -7,6 +7,7 @@ public class Todo
     private string _title;
     private string _description;
     private DateTime _date;
+    private Boolean _status;
 
     public Todo()
     {
@@ -17,6 +18,7 @@ public class Todo
         _title = title;
         _description = description;
         _date = date;
+        _status = false;
     }
 
     public string Title
@@ -35,5 +37,11 @@ public class Todo
     {
         get => _date;
         set => _date = value;
+    }
+
+    public bool Status
+    {
+        get => _status;
+        set => _status = value;
     }
 }

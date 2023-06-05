@@ -15,7 +15,7 @@
             <Label Content="titre :" Width="350" Foreground="White"/>
             <TextBox x:Name="TitleTextBox" Width="350" Height="20"/>
             <Label Content="description :" Width="350" Foreground="White"/>
-            <TextBox x:Name="DescriptionTextBox" Width="350" Height="100" AcceptsReturn="True" AcceptsTab="True"/>
+            <TextBox x:Name="DescriptionTextBox" Width="350" Height="100" AcceptsReturn="True"/>
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="2*"></ColumnDefinition>
@@ -37,8 +37,16 @@
             </Grid>
         </StackPanel>
         <StackPanel Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" >
-            <Button Content="Ajouter" Width="200" Height="40" Margin="25" FontSize="20" BorderBrush="Transparent"
-                    Background="Green" Foreground="White" Click="AddContact_OnClick"/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="1" Content="Ajouter" Width="200" Height="40" Margin="25" FontSize="20" BorderBrush="Transparent"
+                        Background="Green" Foreground="White" Click="AddContact_OnClick"/>
+                <Button Grid.Column="0" Content="Cancel" Width="200" Height="40" Margin="25" FontSize="20" BorderBrush="Transparent"
+                        Background="DarkRed" Foreground="White" Click="ButtonCancel_OnClick"></Button>
+            </Grid>
         </StackPanel>
     </Grid>
     

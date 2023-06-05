@@ -42,5 +42,9 @@ public partial class AddTodo : Window
         }
        
     }
-    
+
+    private void ButtonCancel_OnClick(object sender, RoutedEventArgs e)
+    {
+        Close();
+    }
 }
